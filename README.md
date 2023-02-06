@@ -1,4 +1,4 @@
-# retro-contest-sonic
+# ハーフチーター
 
 A student implementation of the World Models paper with documentation.
 

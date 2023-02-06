@@ -10,6 +10,7 @@ from const import *
 
 class VAECGame(multiprocessing.Process):
     def __init__(self, process_id, vae, lstm, controller, game, result_queue):
+        
         super(VAECGame, self).__init__()
         self.process_id = process_id
         self.game = game
