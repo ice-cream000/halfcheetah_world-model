@@ -78,11 +78,6 @@ LR_DECAY_TICK = 100000
 EXPLOIT_BIAS = 0.25
 TOTAL_TIMESTEPS = 1e6
 
-## Env
-GAMES = [
-    "HalfCheetahBulletEnv-v0"
-]
-
 
 
 

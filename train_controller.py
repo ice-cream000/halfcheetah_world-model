@@ -63,7 +63,7 @@ def train_controller(current_time):
 
     current_time = str(current_time)
     number_generations = 1
-    games = GAMES
+    games = "HalfCheetahBulletEnv-v0"
     current_game = False
     result_queue = Queue()
 
@@ -99,7 +99,7 @@ def train_controller(current_time):
 
                 ## Start the evaluation
                 new_game = VAECGame(process_id, vae, lstm, controller,
-                                    current_game, current_level, result_queue)
+                                    current_game, result_queue)
                 new_game.start()
                 jobs.append(new_game)
 

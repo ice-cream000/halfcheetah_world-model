@@ -22,7 +22,6 @@ class VAECGame(multiprocessing.Process):
     
 
     def _convert(self, predicted_actions):
-        """ Convert predicted action into an environment action """
 
         ## Transform the sigmoid output vector
         final_action = np.zeros((6,), dtype=np.float32)
@@ -38,7 +37,6 @@ class VAECGame(multiprocessing.Process):
 
 
     def run(self):
-        """ Called by process.start() """
 
         final_reward = []
         start_time = timeit.default_timer()
