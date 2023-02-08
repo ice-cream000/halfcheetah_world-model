@@ -1,9 +1,10 @@
-from retro_contest.local import make
+import gym
+import pybullet_envs
 import numpy as np
 
 
 def main():
-    env = make(game='HalfCheetahBulletEnv-v0')
+    env = gym.make('HalfCheetahBulletEnv-v0')
     obs = env.reset()
     total = 0
     while True:
