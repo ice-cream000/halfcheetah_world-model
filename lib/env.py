@@ -1,17 +1,16 @@
 from const import *
 
 import gym
+import pybullet_envs
 import gym_remote.client as grc
 import numpy as np
-from retro_contest.local import make
-import retro
 
 
 def create_env(env_name, contest=False, human=False):
     if human:
-        env = HalfCheetahDiscretizer(retro.make(env_name, scenario="contest", use_restricted_actions=retro.ACTIONS_FILTERED))
+        env = HalfCheetahDiscretizer(gym.make(env_name, scenario="contest", use_restricted_actions=retro.ACTIONS_FILTERED))
     elif not contest:
-        env = HalfCheetahDiscretizer(make(env_name))
+        env = HalfCheetahDiscretizer(gym.make(env_name))
     else:
         env = HalfCheetahDiscretizer(grc.RemoteEnv('tmp/sock'))
     return env
