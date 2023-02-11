@@ -15,7 +15,7 @@ from models.helper import init_models
 
 def test_best_controller(current_time):
     current_time = str(current_time)
-    games = GAMES
+    games = "HalfCheetahBulletEnv-v0"
     result_queue = Queue()
 
     vae, lstm, best_controller, solver, checkpoint = init_models(current_time, sequence=1, load_vae=True, load_lstm=True, load_controller=True)
