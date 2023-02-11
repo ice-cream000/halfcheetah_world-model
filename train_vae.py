@@ -13,6 +13,7 @@ from models.helper import load_model, save_checkpoint
 from lib.dataset import VAEDataset
 from lib.visu import create_img_recons, traverse_latent_space
 from lib.train_utils import create_optimizer, fetch_new_run, create_state
+import retro_contest
 import gym
 import pybullet_envs
 
