@@ -61,10 +61,16 @@ def train_vae(current_time):
     version = 1
     total_ite = 1
 
+    
+    #変更
+    """
+    client.retro_contestを
+    """
     client = MongoClient()
     db = client.retro_contest
     collection = db[current_time]
     fs = gridfs.GridFS(db)
+    
 
     ## Load or create models
     vae, checkpoint = load_model(current_time, -1, model="vae")

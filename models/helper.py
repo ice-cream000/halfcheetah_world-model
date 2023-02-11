@@ -8,7 +8,7 @@ import pickle
 from lib.controller_utils import CMAES
 
 
-def save_checkpoint(model, filename, state, current_time):
+def save_checkpoint(model, filename, state, current_time):                             ###
     """ Save a checkpoint of the models """
 
     dir_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), \
@@ -55,7 +55,7 @@ def get_version(folder_path, file_version, model):
     return file_version
 
 
-def load_model(folder, version, model="vae", sequence=SEQUENCE):
+def load_model(folder, version, model="vae", sequence=SEQUENCE):                         ###
     """ Load a player given a folder and a version """
 
     path = os.path.join(os.path.dirname(os.path.realpath(__file__)), \
